@@ -31,7 +31,7 @@ function Products() {
         <h1 className='text-white text-center lg:text-6xl md:text-5xl text-3xl'>Our Products</h1>
 <div className='grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2 gap-4 justify-items-center'>
   {Catagories.map((cata ,i)=>(
- <div key={i} className=' bg-[#f6efeb]  rounded-sm w-auto'>
+ <div key={i} className=' bg-[#f6efeb]  rounded-sm w-auto hover:scale-105 duration-500 active:scale-100'>
  <Link href={cata.destination}>
    <div>
      <Image className='border-[#666666] border-[2px] border-solid rounded-sm' src={cata.img} width={220} height={100} alt={cata.title}/>

@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import { lipsticks } from './object'
+import Button from '@/app/Components/Button/Button'
 
 function Lipstick() {
   return (
@@ -11,16 +12,16 @@ function Lipstick() {
         <h1 className='text-white text-center lg:text-6xl md:text-5xl text-3xl block'>Lipsticks</h1>
  <div className='grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2 gap-4 justify-items-center'>
   {lipsticks.map((cata ,i)=>(
- <div key={i} className=' bg-[#f6efeb]  rounded-sm w-auto'>
- <div>
-   <div>
+ <div key={i} className=' bg-[#f6efeb]  w-auto hover:scale-105 duration-500 active:scale-100' >
+ <div className='flex flex-col h-full justify-between'>
+  
      <Image className='border-[#666666] border-[2px] border-solid rounded-sm' src={cata.img} width={220} height={100} alt={cata.title}/>
-     <div className='flex flex-col text-black justify-between items-start px-2 py-4'>
+     <div className='flex flex-col text-black justify-between items-start h-full gap-2 px-2 py-4'>
      <p className='text-center  text-[18px]'>{cata.title}</p>
      <p className='text-[12px] w-[170px]'><b className='text-[16px]'>Description: </b>{cata.description}</p>
-     </div>
-    
+     <Button props={"Add to cart"}/>   
    </div>
+   
  </div>
 </div>
   ))}
